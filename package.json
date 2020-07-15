@@ -1,0 +1,35 @@
+{
+  "name": "realar-jest",
+  "version": "0.0.0",
+  "description": "Realar Jest example",
+  "repository": {
+    "url": "https://github.com/betula/realar-performance"
+  },
+  "bugs": {
+    "url": "https://github.com/betula/realar-performance/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "npm i",
+    "test": "jest",
+    "start": "npm run bootstrap && npm run test"
+  },
+  "author": "Slava Birch <mail@betula.co> (http://betula.co)",
+  "keywords": [
+    "realar",
+    "performace"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.10.3",
+    "@babel/preset-env": "7.10.3",
+    "@babel/preset-react": "7.10.1",
+    "babel-jest": "26.1.0",
+    "jest": "26.1.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "realar": "betula/realar"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}
