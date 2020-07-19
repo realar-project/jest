@@ -1,7 +1,7 @@
-import { mock } from "realar/jest";
+import { mock } from "realar";
 import { notifier, api, user_form } from "./user-form";
 
-test("should work", () => {
+test("User form should work", async () => {
   const notifier_mock = mock(notifier);
   const api_mock = mock(api);
 
@@ -9,8 +9,7 @@ test("should work", () => {
 
   api_mock.user_save.mockResolvedValue(0);
 
-  form.save();
+  await form.save();
   expect(notifier_mock.fail).toHaveBeenCalled();
   expect(api_mock.user_save).toHaveBeenCalledWith("a", "b");
-
 });

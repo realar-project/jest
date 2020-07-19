@@ -1,6 +1,6 @@
 {
   "name": "realar-jest",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Realar Jest example",
   "repository": {
     "url": "https://github.com/betula/realar-performance"
@@ -27,7 +27,7 @@
     "jest": "26.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "realar": "betula/realar"
+    "realar": "0.0.2-beta.3"
   },
   "browserslist": [
     "last 2 Chrome versions"

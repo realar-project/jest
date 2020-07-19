@@ -1,5 +1,5 @@
 {
   "setupFilesAfterEnv": [
-    "realar/jest/env"
+    "realar/jest"
   ]
 }

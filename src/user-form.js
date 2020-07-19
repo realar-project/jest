@@ -1,4 +1,4 @@
-import { unit } from "realar";
+import { unit, service } from "realar";
 
 // Some real notifier service
 export const notifier = unit({
@@ -28,7 +28,7 @@ export const user_form = unit({
     return this.proc > 0;
   },
 
-  constructor(username, password) {
+  construct(username, password) {
     if (username) this.username = username;
     if (password) this.password = password;
   },
