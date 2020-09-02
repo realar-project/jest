@@ -27,7 +27,7 @@
     "jest": "26.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "realar": "0.0.2-beta.3"
+    "realar": "0.1.1"
   },
   "browserslist": [
     "last 2 Chrome versions"
