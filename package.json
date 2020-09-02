@@ -12,7 +12,8 @@
   "scripts": {
     "bootstrap": "npm i",
     "test": "jest",
-    "start": "npm run bootstrap && npm run test"
+    "test:clear": "jest --clearCache",
+    "start": "npm run bootstrap && npm run test:clear && npm run test"
   },
   "author": "Slava Birch <mail@betula.co> (http://betula.co)",
   "keywords": [
