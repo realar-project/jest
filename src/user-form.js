@@ -1,14 +1,14 @@
-import { unit, service } from "realar";
+import { unit, shared } from "realar";
 
 // Some real notifier service
-export const notifier = unit({
+export const Notifier = unit({
   ok: () => console.log("ok"),
   fail: () => console.log("fail"),
 })
 
 // Some real external api gateway service
-export const api = unit({
-  async user_save(username, password) {
+export const Api = unit({
+  async userSave(username, password) {
     // Some real post remote request to api
     await new Promise(r => setTimeout(r, 1000));
     console.log(username, password);
@@ -16,9 +16,10 @@ export const api = unit({
   }
 })
 
-export const user_form = unit({
-  notifier: service(notifier),
-  api: service(api),
+// Tested form
+export const UserForm = unit({
+  notifier: shared(Notifier),
+  api: shared(Api),
 
   username: '',
   password: '',
@@ -35,7 +36,7 @@ export const user_form = unit({
 
   async save() {
     this.proc ++;
-    const res = await this.api.user_save(this.username, this.password);
+    const res = await this.api.userSave(this.username, this.password);
     if (res) {
       this.notifier.ok();
     }

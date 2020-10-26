@@ -1,15 +1,15 @@
 import { mock } from "realar";
-import { notifier, api, user_form } from "./user-form";
+import { Notifier, Api, UserForm } from "./user-form";
 
 test("User form should work", async () => {
-  const notifier_mock = mock(notifier);
-  const api_mock = mock(api);
+  const notifierMock = mock(Notifier);
+  const apiMock = mock(Api);
 
-  const form = user_form("a", "b");
+  const form = UserForm("a", "b");
 
-  api_mock.user_save.mockResolvedValue(0);
+  apiMock.userSave.mockResolvedValue(0);
 
   await form.save();
-  expect(notifier_mock.fail).toHaveBeenCalled();
-  expect(api_mock.user_save).toHaveBeenCalledWith("a", "b");
+  expect(notifierMock.fail).toHaveBeenCalled();
+  expect(apiMock.userSave).toHaveBeenCalledWith("a", "b");
 });
