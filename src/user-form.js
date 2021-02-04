@@ -1,4 +1,4 @@
-import { box, sel, shared } from "realar";
+import { prop, cache, shared } from "realar";
 
 // Some real notifier service
 export class Notifier {
@@ -21,11 +21,11 @@ export class UserForm {
   notifier = shared(Notifier)
   api = shared(Api);
 
-  @box username = '';
-  @box password = '';
-  @box proc = '';
+  @prop username = '';
+  @prop password = '';
+  @prop proc = '';
 
-  @sel get disabled() {
+  @cache get disabled() {
     return this.proc > 0;
   }
 
