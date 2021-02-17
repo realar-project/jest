@@ -24,7 +24,7 @@
     "unit test"
   ],
   "dependencies": {
-    "realar": "0.4.x"
+    "realar": "0.5.x"
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
