@@ -3,10 +3,10 @@
   "version": "2.0.0",
   "description": "Realar Jest example",
   "repository": {
-    "url": "https://github.com/betula/realar-performance"
+    "url": "https://github.com/realar-project/jest"
   },
   "bugs": {
-    "url": "https://github.com/betula/realar-performance/issues"
+    "url": "https://github.com/realar-project/jest/issues"
   },
   "license": "MIT",
   "scripts": {
@@ -24,7 +24,7 @@
     "unit test"
   ],
   "dependencies": {
-    "realar": "0.5.x"
+    "realar": "0.6.1"
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
